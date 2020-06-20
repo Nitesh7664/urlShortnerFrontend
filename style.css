@@ -33,6 +33,15 @@ img {
   font-size: 55px;
   margin: 1em 0;
 }
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: left;
+  font-weight: 300;
+  height: 400px;
+  z-index: 2;
+}
 @media screen and (max-width: 600px) {
   .header {
     flex-direction: column;
@@ -41,14 +50,9 @@ img {
     margin-top: 0;
     font-size: 30px;
   }
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: left;
-  font-weight: 300;
-  min-height: 300px;
+  .form {
+    height: 300px;
+  }
 }
 
 .input-section {
@@ -114,8 +118,6 @@ input:focus {
   display: none;
 }
 .footer {
-  position: absolute;
-  left: 50%;
-  bottom: 5%;
-  transform: translate(-50%, 50%);
+  margin: 100px 0;
+  text-align: center;
 }
