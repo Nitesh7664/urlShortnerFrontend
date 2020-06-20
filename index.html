@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL shortner</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Chewy"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/e294a29460.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="./images/img4.png" alt="man holding a scissors" />
+        <span class="header-title">URL Shortner</span>
+      </div>
+
+      <div class="form">
+        <p>
+          Simply, paste the URL you want to shorten
+          <span class="emoji">😀</span>
+        </p>
+        <div class="input-section">
+          <input
+            type="url"
+            name="longUrl"
+            id="longUrl"
+            placeholder="Enter the url here"
+          />
+          <button type="submit" id="shorten">
+            <i class="fa fa-scissors" aria-hidden="true"></i> Shorten
+          </button>
+        </div>
+        <div id="spinner" class="spinner hide">
+          <img src="./images/spinner1.gif" alt="loader" />
+        </div>
+
+        <p id="shortPara" class="hide">
+          Here, is your short Url<span class="emoji">😎</span>
+        </p>
+        <div class="input-section hide" id="shortForm">
+          <input type="url" name="shortUrl" id="shortUrl" />
+          <button id="copyBtn">
+            <i class="fa fa-clipboard" aria-hidden="true"></i> Copy
+          </button>
+        </div>
+      </div>
+
+      <div class="footer">made with ❤️ by Nitesh👦</div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
