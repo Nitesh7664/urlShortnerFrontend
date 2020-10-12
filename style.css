@@ -121,3 +121,8 @@ input:focus {
   margin: 100px 0;
   text-align: center;
 }
+
+#error-message {
+  color: red;
+  font-weight: bold;
+}
