@@ -20,17 +20,17 @@ shorten.addEventListener("click", () => {
     .then((responseData) => {
 
       if(responseData.data.message){
-         const errorMessage = document.createElement('div')
+         const errorMessage = document.createElement('p')
          const text = document.createTextNode(responseData.data.message);
          errorMessage.appendChild(text)
-         errorMessage.classList.add('error')
+         errorMessageContainer.classList.add('error')
          errorMessageContainer.appendChild(errorMessage)
+         errorMessageContainer.classList.remove("hide")
       }
 
       spinner.classList.add("hide");
       shortForm.classList.remove("hide");
       shortPara.classList.remove("hide");
-      errorMessageContainer.classList.remove("hide")
       shortUrl.value = responseData.data.shortUrl;
     })
     .catch((err) => console.log(err));
