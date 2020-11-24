@@ -5,8 +5,11 @@ var copyBtn = document.querySelector("#copyBtn");
 var spinner = document.querySelector("#spinner");
 var shortForm = document.querySelector("#shortForm");
 var shortPara = document.querySelector("#shortPara");
+var errorMessageContainer = document.querySelector('#errorMessageContainer')
 
 shorten.addEventListener("click", () => {
+   errorMessageContainer.innerHTML = ""
+   errorMessageContainer.classList.add("hide")
   shortForm.classList.add("hide");
   shortPara.classList.add("hide");
   spinner.classList.remove("hide");
@@ -15,6 +18,15 @@ shorten.addEventListener("click", () => {
       longUrl: longUrl.value,
     })
     .then((responseData) => {
+
+      if(responseData.data.message){
+         const errorMessage = document.createElement('div')
+         const text = document.createTextNode(responseData.data.message);
+         errorMessage.appendChild(text)
+         errorMessage.classList.add('error')
+         errorMessageContainer.appendChild(errorMessage)
+      }
+
       spinner.classList.add("hide");
       shortForm.classList.remove("hide");
       shortPara.classList.remove("hide");

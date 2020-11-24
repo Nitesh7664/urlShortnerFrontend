@@ -76,6 +76,13 @@ img {
     margin-top: 0.5em;
   }
 }
+.error{
+   padding: 1em;
+   color: red;
+   font-size: 1em;
+   font-weight: bold;
+   width: 90%;
+}
 p {
   width: 90%;
   margin: 0.5em auto;
