@@ -30,6 +30,7 @@ shorten.addEventListener("click", () => {
       spinner.classList.add("hide");
       shortForm.classList.remove("hide");
       shortPara.classList.remove("hide");
+      errorMessageContainer.classList.remove("hide")
       shortUrl.value = responseData.data.shortUrl;
     })
     .catch((err) => console.log(err));
